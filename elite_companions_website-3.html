@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Companions</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0f0f12;color:#fff}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;background:#17171c}
+.logo{font-size:24px;font-weight:700;color:#d9b36c}nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{padding:90px 7%;text-align:center;background:linear-gradient(135deg,#211b27,#0f0f12)}
+.hero h1{font-size:46px;margin:0 0 15px}.hero p{color:#ccc;font-size:18px}
+.btn{display:inline-block;margin-top:20px;padding:13px 24px;border-radius:8px;background:#d9b36c;color:#111;text-decoration:none;font-weight:700}
+section{padding:55px 7%}.title{text-align:center;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#19191f;border:1px solid #292932;border-radius:14px;padding:22px;text-align:center}
+.avatar{height:180px;border-radius:12px;background:#2b2730;display:flex;align-items:center;justify-content:center;color:#aaa;margin-bottom:15px}
+input,textarea,select{width:100%;padding:13px;margin:8px 0;border:1px solid #333;background:#111;color:#fff;border-radius:8px}
+button{border:0;cursor:pointer}
+footer{text-align:center;padding:30px;color:#999;background:#0a0a0d}
+.small{font-size:13px;color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ELITE COMPANIONS</div>
+<nav><a href="#services">Services</a><a href="#profiles">Profiles</a><a href="#booking">Booking</a></nav>
+</header>
+
+<div class="hero">
+<h1>Private Companion Services</h1>
+<p>Professional, discreet and respectful companion experiences for adults.</p>
+<a class="btn" href="#booking">Request a Booking</a> <a class="btn" href="https://t.me/Devidmeena8" target="_blank" rel="noopener">Contact on Telegram</a>
+</div>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+<div class="grid">
+<div class="card"><h3>Social Events</h3><p>Companionship for dinners, parties and social occasions.</p></div>
+<div class="card"><h3>Travel Companion</h3><p>Professional adult companionship for eligible travel arrangements.</p></div>
+<div class="card"><h3>Private Meetings</h3><p>Discreet appointments arranged with clear boundaries and consent.</p></div>
+</div>
+</section>
+
+<section id="profiles">
+<h2 class="title">Featured Profiles</h2>
+<div class="grid">
+<div class="card"><div class="avatar">Profile Photo</div><h3>Alex</h3><p>City: Udaipur</p><p class="small">Adult • Verified profile</p></div>
+<div class="card"><div class="avatar">Profile Photo</div><h3>Sam</h3><p>City: Udaipur</p><p class="small">Adult • Verified profile</p></div>
+<div class="card"><div class="avatar">Profile Photo</div><h3>Jordan</h3><p>City: Udaipur</p><p class="small">Adult • Verified profile</p></div>
+</div>
+</section>
+
+<section id="booking">
+<h2 class="title">Booking Request</h2>
+<form class="card" onsubmit="sendRequest(event)">
+<input id="name" placeholder="Your name" required>
+<input id="phone" placeholder="Phone number" required>
+<select id="service" required><option value="">Select service</option><option>Social Event</option><option>Travel Companion</option><option>Private Meeting</option></select>
+<input id="date" type="date" required>
+<textarea id="message" rows="4" placeholder="Your request"></textarea>
+<button class="btn" type="submit">Send Request</button>
+<p id="status" class="small"></p>
+</form>
+</section>
+
+<footer>
+18+ only. All participants must be adults and participation must be voluntary and consensual.<br>
+© 2026 Elite Companions
+</footer>
+
+<script>
+function sendRequest(e){
+ e.preventDefault();
+ document.getElementById('status').textContent =
+ 'Request received. Please contact the service administrator to confirm availability.';
+}
+</script>
+</body>
+</html>
